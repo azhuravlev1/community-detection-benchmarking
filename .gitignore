@@ -1,0 +1,11 @@
+# Portfolio hygiene
+.DS_Store
+**/.ipynb_checkpoints/
+
+# Hide assignment-labeled originals
+Assignment*.ipynb
+Assignment*.pdf
+resume_summary_private.txt
+
+# Optional local docs
+chapter-5.pdf
