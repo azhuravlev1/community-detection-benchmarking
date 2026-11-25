@@ -1,24 +1,5 @@
-# Community Detection Runtime Scaling Study
+# Runtime scaling
 
-## Objective
+Every algorithm timed on generated benchmark graphs of increasing size. Girvan-Newman is by far the slowest and stops being usable on larger graphs. Label propagation is the fastest throughout.
 
-Quantify computational cost growth across community detection algorithms as graph size increases.
-
-## Approach
-
-- Generated benchmark graphs at multiple node sizes.
-- Timed each algorithm on every graph size and built a runtime comparison table.
-
-## Key Result
-
-- **Girvan-Newman** is by far the slowest and scales poorly for larger graphs.
-- **Label Propagation** is consistently the fastest among tested methods.
-
-## Why this matters
-
-In production analytics, algorithm choice is often constrained by runtime and resource budgets; this study supports defensible method selection under scale.
-
-## Reproducibility
-
-See notebook: `../analysis.ipynb` (runtime scaling section)
-
+Code: the runtime section of [`../analysis.ipynb`](../analysis.ipynb).

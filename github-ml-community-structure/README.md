@@ -1,27 +1,5 @@
-# GitHub ML Community Structure Comparison
+# GitHub ML developers: agreement between algorithms
 
-## Objective
+Six algorithms (all except Girvan-Newman, which is too slow here) partition the machine learning subgraph of the GitHub developer network. With no ground truth available, the partitions are compared with each other in a pairwise AMI matrix. Leiden and Louvain agree most (about 0.65); Infomap and label propagation agree least (about 0.29).
 
-Compare how different community detection algorithms partition a GitHub ML developer network when no explicit ground-truth communities are available.
-
-## Approach
-
-- Built ML-only subgraph from GitHub developer network.
-- Ran 6 community detection algorithms (excluding Girvan-Newman for computational efficiency on this graph size).
-- Computed pairwise **AMI agreement matrix** across algorithm outputs.
-
-## Key Findings
-
-- Highest agreement observed between **Leiden and Louvain** (AMI ~0.652).
-- Lowest agreement observed between **Infomap and Label Propagation** (AMI ~0.290), indicating materially different community assumptions/behavior.
-
-## Why this matters
-
-Demonstrates practical model-selection analysis in unsupervised settings where:
-- labels are unavailable,
-- method agreement can guide confidence and downstream use.
-
-## Reproducibility
-
-See notebook: `../analysis.ipynb` (GitHub ML section)
-
+Code: the GitHub ML section of [`../analysis.ipynb`](../analysis.ipynb).
